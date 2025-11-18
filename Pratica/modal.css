@@ -1,0 +1,117 @@
+:root {
+  --text-color-primary: #f8f3ec;
+  --text-color-second: #282828;
+
+  --primary-color--button: #1283eb;
+  --secondary-color--button: #09549b;
+
+  --secondary-color: #ffe459;
+  --third-color: #7b61ff;
+  /* 
+referencia:
+https://i.pinimg.com/1200x/4a/c9/53/4ac95300a6830bcb95f5bae31dac8268.jpg
+ */
+}
+
+#modal-overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  visibility: hidden;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+#modal-background {
+  background-color: var(--secondary-color--button);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+#modal-container {
+  z-index: 1;
+  background-color: var(--text-color-second);
+  padding: 1rem 3rem;
+  border-radius: 16px;
+}
+
+#modal-body {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+#modal-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--secondary-color);
+  padding: 1rem 0;
+}
+
+#movie-poster {
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #0000001c;
+}
+
+#movie-plot {
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+}
+
+#movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 300px;
+  padding-left: 2rem;
+
+  color: var(--text-color-primary);
+}
+
+#movie-info > #movie-genre,
+#movie-director,
+#movie-awards,
+#movie-cast {
+  padding: 0.2rem 0;
+}
+#movie-info h5 {
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+#add-to-list {
+  border: 1px solid var(--primary-color);
+  background-color: #363636;
+  color: var(--text-color-primary);
+  width: 100%;
+  height: 36px;
+  padding: 0.3rem 0.2rem;
+  border-radius: 10px;
+  font-weight: 400;
+  /* text-transform: lowercase; */
+  font-size: medium;
+  transition: background-color 0.3s;
+  box-shadow: 2px 2px 10px #00000065;
+}
+#add-to-list :focus,
+#add-to-list:hover {
+  background-color: var(--secondary-color--button);
+}
